@@ -1,0 +1,14 @@
+{
+ "block": "{\n \"activeState\": null,\n \"attributes\": {},\n \"baseStyles\": {\n  \"backgroundColor\": \"#ededed\",\n  \"display\": \"flex\",\n  \"flexDirection\": \"column\",\n  \"flexShrink\": 0,\n  \"height\": \"200px\",\n  \"overflow\": \"hidden\",\n  \"width\": \"100%\"\n },\n \"blockClientScript\": \"\",\n \"blockDataScript\": \"\",\n \"blockId\": \"606l83puz\",\n \"blockName\": \"container\",\n \"children\": [],\n \"classes\": [],\n \"customAttributes\": {},\n \"dataKey\": null,\n \"dynamicValues\": [],\n \"element\": \"div\",\n \"mobileStyles\": {},\n \"props\": {},\n \"rawStyles\": {},\n \"tabletStyles\": {}\n}",
+ "component_id": "1ee9c2b2f6d88986",
+ "component_name": "test",
+ "creation": "2026-04-22 15:32:55.813805",
+ "docstatus": 0,
+ "doctype": "Builder Component",
+ "for_web_page": null,
+ "idx": 0,
+ "modified": "2026-04-22 15:33:01.813056",
+ "modified_by": "Administrator",
+ "name": "1ee9c2b2f6d88986",
+ "owner": "Administrator"
+}

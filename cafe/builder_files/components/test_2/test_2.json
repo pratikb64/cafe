@@ -1,0 +1,14 @@
+{
+ "block": "{\n \"activeState\": null,\n \"attributes\": {},\n \"baseStyles\": {\n  \"backgroundColor\": \"#e2e2e2\",\n  \"display\": \"flex\",\n  \"flexDirection\": \"column\",\n  \"flexShrink\": 0,\n  \"height\": \"200px\",\n  \"overflow\": \"hidden\",\n  \"width\": \"100%\"\n },\n \"blockClientScript\": \"\",\n \"blockDataScript\": \"\",\n \"blockId\": \"knar97tb5\",\n \"blockName\": \"container\",\n \"children\": [],\n \"classes\": [],\n \"customAttributes\": {},\n \"dataKey\": null,\n \"dynamicValues\": [],\n \"element\": \"div\",\n \"mobileStyles\": {},\n \"props\": {},\n \"rawStyles\": {},\n \"tabletStyles\": {}\n}",
+ "component_id": "ed3cb150d69528c6",
+ "component_name": "test 2",
+ "creation": "2026-04-22 15:33:58.494561",
+ "docstatus": 0,
+ "doctype": "Builder Component",
+ "for_web_page": "page-260c9d18",
+ "idx": 0,
+ "modified": "2026-04-22 15:33:58.494561",
+ "modified_by": "Administrator",
+ "name": "ed3cb150d69528c6",
+ "owner": "Administrator"
+}
