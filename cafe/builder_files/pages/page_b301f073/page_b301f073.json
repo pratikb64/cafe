@@ -28,7 +28,6 @@
       "flexDirection": "row",
       "flexShrink": 0,
       "fontFamily": "Inter Regular",
-      "height": "fit-content",
       "overflow": "hidden",
       "width": "100%"
      },
@@ -106,7 +105,6 @@
         "flexDirection": "column",
         "flexGrow": 1,
         "flexShrink": 1,
-        "height": "100vh",
         "justifyContent": "flex-start",
         "minHeight": "100%",
         "overflow": "hidden",
@@ -317,7 +315,7 @@
                "attributes": {},
                "baseStyles": {
                 "alignSelf": "stretch",
-                "color": "rgb(23, 23, 23)",
+                "color": "var(--ink-gray-8)",
                 "fontSize": "24px",
                 "fontWeight": "600",
                 "letterSpacing": "0.12px",
@@ -500,9 +498,9 @@
                        "activeState": null,
                        "attributes": {},
                        "baseStyles": {
-                        "color": "rgb(23, 23, 23)",
+                        "color": "var(--ink-gray-8)",
                         "fontSize": "16px",
-                        "fontWeight": "600",
+                        "fontWeight": "500",
                         "letterSpacing": "0.24px",
                         "lineHeight": "115% "
                        },
@@ -514,7 +512,14 @@
                        "classes": [],
                        "customAttributes": {},
                        "dataKey": null,
-                       "dynamicValues": [],
+                       "dynamicValues": [
+                        {
+                         "comesFrom": "dataScript",
+                         "key": "author.name",
+                         "property": "innerHTML",
+                         "type": "key"
+                        }
+                       ],
                        "element": "p",
                        "innerHTML": "<p>Jane Doe</p>",
                        "mobileStyles": {},
@@ -582,25 +587,123 @@
                    "activeState": null,
                    "attributes": {},
                    "baseStyles": {
-                    "color": "rgb(82, 82, 82)",
-                    "fontSize": "14px",
-                    "fontWeight": "420",
-                    "letterSpacing": "0.28px",
-                    "lineHeight": "115% "
+                    "alignItems": "center",
+                    "display": "flex",
+                    "flexDirection": "row",
+                    "flexShrink": 0,
+                    "gap": "4px",
+                    "height": "fit-content",
+                    "justifyContent": "flex-start",
+                    "overflow": "hidden",
+                    "width": "fit-content"
                    },
                    "blockClientScript": "",
                    "blockDataScript": "",
-                   "blockId": "slbcdxd8q",
-                   "blockName": "Oct 12, 2023 • 5 min read",
-                   "children": [],
+                   "blockId": "bm94g3a90",
+                   "blockName": "container",
+                   "children": [
+                    {
+                     "activeState": null,
+                     "attributes": {},
+                     "baseStyles": {
+                      "color": "var(--ink-gray-6)",
+                      "fontSize": "14px",
+                      "fontWeight": "400",
+                      "letterSpacing": "0.28px",
+                      "lineHeight": "115% "
+                     },
+                     "blockClientScript": "",
+                     "blockDataScript": "",
+                     "blockId": "slbcdxd8q",
+                     "blockName": "Oct 12, 2023 • 5 min read",
+                     "children": [],
+                     "classes": [],
+                     "customAttributes": {},
+                     "dataKey": null,
+                     "dynamicValues": [
+                      {
+                       "comesFrom": "dataScript",
+                       "key": "post.creation",
+                       "property": "innerHTML",
+                       "type": "key"
+                      }
+                     ],
+                     "element": "p",
+                     "innerHTML": "<p>date</p>",
+                     "mobileStyles": {},
+                     "originalElement": "",
+                     "props": {},
+                     "rawStyles": {},
+                     "tabletStyles": {}
+                    },
+                    {
+                     "activeState": null,
+                     "attributes": {},
+                     "baseStyles": {
+                      "color": "rgb(82, 82, 82)",
+                      "fontSize": "14px",
+                      "fontWeight": "420",
+                      "letterSpacing": "0.28px",
+                      "lineHeight": "115% "
+                     },
+                     "blockClientScript": "",
+                     "blockDataScript": "",
+                     "blockId": "9j19wn8vq",
+                     "blockName": "Oct 12, 2023 • 5 min read",
+                     "children": [],
+                     "classes": [],
+                     "customAttributes": {},
+                     "dataKey": null,
+                     "dynamicValues": [],
+                     "element": "p",
+                     "innerHTML": "<p>•</p>",
+                     "mobileStyles": {},
+                     "originalElement": "",
+                     "props": {},
+                     "rawStyles": {},
+                     "tabletStyles": {}
+                    },
+                    {
+                     "activeState": null,
+                     "attributes": {},
+                     "baseStyles": {
+                      "color": "var(--ink-gray-6)",
+                      "fontSize": "14px",
+                      "fontWeight": "400",
+                      "letterSpacing": "0.28px",
+                      "lineHeight": "115% "
+                     },
+                     "blockClientScript": "",
+                     "blockDataScript": "",
+                     "blockId": "plep9hk2r",
+                     "blockName": "Oct 12, 2023 • 5 min read",
+                     "children": [],
+                     "classes": [],
+                     "customAttributes": {},
+                     "dataKey": null,
+                     "dynamicValues": [
+                      {
+                       "comesFrom": "dataScript",
+                       "key": "post.reading_time",
+                       "property": "innerHTML",
+                       "type": "key"
+                      }
+                     ],
+                     "element": "p",
+                     "innerHTML": "<p>time to read</p>",
+                     "mobileStyles": {},
+                     "originalElement": "",
+                     "props": {},
+                     "rawStyles": {},
+                     "tabletStyles": {}
+                    }
+                   ],
                    "classes": [],
                    "customAttributes": {},
                    "dataKey": null,
                    "dynamicValues": [],
-                   "element": "p",
-                   "innerHTML": "<p>Oct 12, 2023 • 5 min read</p>",
+                   "element": "div",
                    "mobileStyles": {},
-                   "originalElement": "",
                    "props": {},
                    "rawStyles": {},
                    "tabletStyles": {}
@@ -694,11 +797,13 @@
                    "tabletStyles": {}
                   }
                  ],
-                 "classes": [],
+                 "classes": [
+                  "subscribe-btn"
+                 ],
                  "customAttributes": {},
                  "dataKey": null,
                  "dynamicValues": [],
-                 "element": "div",
+                 "element": "button",
                  "innerHTML": "",
                  "mobileStyles": {},
                  "originalElement": "",
@@ -1012,16 +1117,18 @@
            "activeState": null,
            "attributes": {},
            "baseStyles": {
-            "alignItems": "flex-start",
-            "alignSelf": "stretch",
             "display": "flex",
+            "flexDirection": "row",
+            "flexShrink": 0,
             "flexWrap": "wrap",
-            "gap": "0 8px"
+            "gap": "8px",
+            "overflow": "hidden",
+            "width": "100%"
            },
            "blockClientScript": "",
            "blockDataScript": "",
-           "blockId": "nfp5n10tc",
-           "blockName": "Container",
+           "blockId": "yw0j60pyv",
+           "blockName": "Tags",
            "children": [
             {
              "activeState": null,
@@ -1037,7 +1144,7 @@
              },
              "blockClientScript": "",
              "blockDataScript": "",
-             "blockId": "9mwm77t9s",
+             "blockId": "3xdioogs1",
              "blockName": "tag",
              "children": [
               {
@@ -1052,129 +1159,22 @@
                },
                "blockClientScript": "",
                "blockDataScript": "",
-               "blockId": "lj62vrfzk",
+               "blockId": "u8pc97ak2",
                "blockName": "Discover",
                "children": [],
                "classes": [],
                "customAttributes": {},
                "dataKey": null,
-               "dynamicValues": [],
+               "dynamicValues": [
+                {
+                 "comesFrom": "dataScript",
+                 "key": "tag",
+                 "property": "innerHTML",
+                 "type": "key"
+                }
+               ],
                "element": "p",
                "innerHTML": "<p>Design</p>",
-               "mobileStyles": {},
-               "originalElement": "",
-               "props": {},
-               "rawStyles": {},
-               "tabletStyles": {}
-              }
-             ],
-             "classes": [],
-             "customAttributes": {},
-             "dataKey": null,
-             "dynamicValues": [],
-             "element": "div",
-             "innerHTML": "",
-             "mobileStyles": {},
-             "originalElement": "",
-             "props": {},
-             "rawStyles": {},
-             "tabletStyles": {}
-            },
-            {
-             "activeState": null,
-             "attributes": {},
-             "baseStyles": {
-              "alignItems": "center",
-              "backgroundColor": "rgb(243, 243, 243)",
-              "borderRadius": "8px",
-              "display": "flex",
-              "gap": "4px",
-              "justifyContent": "center",
-              "padding": "6px 8px"
-             },
-             "blockClientScript": "",
-             "blockDataScript": "",
-             "blockId": "iyt0l32lu",
-             "blockName": "tag",
-             "children": [
-              {
-               "activeState": null,
-               "attributes": {},
-               "baseStyles": {
-                "color": "rgb(56, 56, 56)",
-                "fontSize": "14px",
-                "fontWeight": "420",
-                "letterSpacing": "0.28px",
-                "lineHeight": "115% "
-               },
-               "blockClientScript": "",
-               "blockDataScript": "",
-               "blockId": "1fze5cyrm",
-               "blockName": "Discover",
-               "children": [],
-               "classes": [],
-               "customAttributes": {},
-               "dataKey": null,
-               "dynamicValues": [],
-               "element": "p",
-               "innerHTML": "<p>UX/UI</p>",
-               "mobileStyles": {},
-               "originalElement": "",
-               "props": {},
-               "rawStyles": {},
-               "tabletStyles": {}
-              }
-             ],
-             "classes": [],
-             "customAttributes": {},
-             "dataKey": null,
-             "dynamicValues": [],
-             "element": "div",
-             "innerHTML": "",
-             "mobileStyles": {},
-             "originalElement": "",
-             "props": {},
-             "rawStyles": {},
-             "tabletStyles": {}
-            },
-            {
-             "activeState": null,
-             "attributes": {},
-             "baseStyles": {
-              "alignItems": "center",
-              "backgroundColor": "rgb(243, 243, 243)",
-              "borderRadius": "8px",
-              "display": "flex",
-              "gap": "4px",
-              "justifyContent": "center",
-              "padding": "6px 8px"
-             },
-             "blockClientScript": "",
-             "blockDataScript": "",
-             "blockId": "x3vmj7y70",
-             "blockName": "tag",
-             "children": [
-              {
-               "activeState": null,
-               "attributes": {},
-               "baseStyles": {
-                "color": "rgb(56, 56, 56)",
-                "fontSize": "14px",
-                "fontWeight": "420",
-                "letterSpacing": "0.28px",
-                "lineHeight": "115% "
-               },
-               "blockClientScript": "",
-               "blockDataScript": "",
-               "blockId": "licp1bqus",
-               "blockName": "Discover",
-               "children": [],
-               "classes": [],
-               "customAttributes": {},
-               "dataKey": null,
-               "dynamicValues": [],
-               "element": "p",
-               "innerHTML": "<p>Minimalism</p>",
                "mobileStyles": {},
                "originalElement": "",
                "props": {},
@@ -1197,16 +1197,18 @@
            ],
            "classes": [],
            "customAttributes": {},
-           "dataKey": null,
-           "dynamicValues": [],
-           "element": "section",
-           "innerHTML": "",
-           "mobileStyles": {},
-           "originalElement": "",
-           "props": {},
-           "rawStyles": {
-            "alignContent": "flex-start"
+           "dataKey": {
+            "comesFrom": "dataScript",
+            "key": "post.tags",
+            "property": "innerHTML",
+            "type": "key"
            },
+           "dynamicValues": [],
+           "element": "div",
+           "isRepeaterBlock": true,
+           "mobileStyles": {},
+           "props": {},
+           "rawStyles": {},
            "tabletStyles": {}
           },
           {
@@ -1374,7 +1376,7 @@
                    "attributes": {},
                    "baseStyles": {
                     "alignSelf": "stretch",
-                    "color": "rgb(23, 23, 23)",
+                    "color": "var(--ink-gray-8)",
                     "fontSize": "13px",
                     "fontWeight": "500",
                     "letterSpacing": "0.26px",
@@ -1430,10 +1432,10 @@
                    "attributes": {},
                    "baseStyles": {
                     "alignSelf": "stretch",
-                    "color": "rgb(56, 56, 56)",
+                    "color": "var(--ink-gray-7)",
                     "display": "-webkit-box",
                     "fontSize": "13px",
-                    "fontWeight": "420",
+                    "fontWeight": "400",
                     "letterSpacing": "0.195px",
                     "lineHeight": "150% "
                    },
@@ -1539,11 +1541,13 @@
                  "tabletStyles": {}
                 }
                ],
-               "classes": [],
+               "classes": [
+                "subscribe-btn"
+               ],
                "customAttributes": {},
                "dataKey": null,
                "dynamicValues": [],
-               "element": "div",
+               "element": "button",
                "innerHTML": "",
                "mobileStyles": {},
                "originalElement": "",
@@ -1614,7 +1618,7 @@
                 "display": "flex",
                 "gap": "8px"
                },
-               "blockClientScript": "",
+               "blockClientScript": "async function likePost(postName) {\n    const url = '/api/resource/Cafe Social Like';\n    \n    const payload = {\n        // doc: {\n            doctype: \"Cafe Social Like\",\n            post: postName\n        // }\n    };\n    \n    try {\n        const response = await fetch(url, {\n            method: 'POST',\n            headers: {\n                'Content-Type': 'application/json',\n                'X-Frappe-CSRF-Token': frappe.csrf_token || ''\n            },\n            body: JSON.stringify(payload)\n        });\n        \n        if (!response.ok) {\n            const error = await response.json();\n            throw new Error(error.message || 'Failed to like post');\n        }\n        \n        const result = await response.json();\n        const likedByMe = result.data.liked_by_me;\n        const likeCount = result.data.like_count;\n        \n        // Update like icon based on state\n        const likeIcon = document.getElementById('like-icon');\n        if (likeIcon) {\n            const svgPath = likeIcon.querySelector('path');\n            if (svgPath) {\n                if (likedByMe) {\n                    // Fill the heart when liked\n                    svgPath.setAttribute('fill', '#ef4444');\n                } else {\n                    // Empty heart when unliked\n                    svgPath.setAttribute('fill', '#525252');\n                }\n            }\n        }\n        \n        // Update like count from response\n        const likeCountElement = document.getElementById('post-likes-count');\n        if (likeCountElement) {\n            likeCountElement.textContent = likeCount;\n        }\n        \n        \n        return result;\n        \n    } catch (error) {\n        console.error('Error liking post:', error);\n        throw error;\n    }\n}\n\nthis.addEventListener(\"click\", () => { likePost(this.getAttribute('post-id')) })",
                "blockDataScript": "",
                "blockId": "exnrenqp0",
                "blockName": "Button",
@@ -1632,7 +1636,10 @@
                  "blockName": "icon/line/heart",
                  "children": [],
                  "classes": [],
-                 "customAttributes": {},
+                 "customAttributes": {
+                  "id": "like-icon",
+                  "is-liked": "{{ post.liked_by_me }}"
+                 },
                  "dataKey": null,
                  "dynamicValues": [],
                  "element": "svg",
@@ -1660,9 +1667,9 @@
                    "activeState": null,
                    "attributes": {},
                    "baseStyles": {
-                    "color": "rgb(82, 82, 82)",
+                    "color": "var(--ink-gray-6)",
                     "fontSize": "14px",
-                    "fontWeight": "420",
+                    "fontWeight": "400",
                     "letterSpacing": "0.28px",
                     "lineHeight": "115% ",
                     "textAlign": "center"
@@ -1673,9 +1680,18 @@
                    "blockName": "2.4K",
                    "children": [],
                    "classes": [],
-                   "customAttributes": {},
+                   "customAttributes": {
+                    "id": "post-likes-count"
+                   },
                    "dataKey": null,
-                   "dynamicValues": [],
+                   "dynamicValues": [
+                    {
+                     "comesFrom": "dataScript",
+                     "key": "post.like_count",
+                     "property": "innerHTML",
+                     "type": "key"
+                    }
+                   ],
                    "element": "p",
                    "innerHTML": "<p>2.4K</p>",
                    "mobileStyles": {},
@@ -1699,10 +1715,12 @@
                 }
                ],
                "classes": [],
-               "customAttributes": {},
+               "customAttributes": {
+                "post-id": "{{  post.name }}"
+               },
                "dataKey": null,
                "dynamicValues": [],
-               "element": "section",
+               "element": "button",
                "innerHTML": "",
                "mobileStyles": {},
                "originalElement": "",
@@ -1764,9 +1782,9 @@
                    "activeState": null,
                    "attributes": {},
                    "baseStyles": {
-                    "color": "rgb(82, 82, 82)",
+                    "color": "var(--ink-gray-6)",
                     "fontSize": "14px",
-                    "fontWeight": "420",
+                    "fontWeight": "400",
                     "letterSpacing": "0.28px",
                     "lineHeight": "115% ",
                     "textAlign": "center"
@@ -1777,9 +1795,18 @@
                    "blockName": "48",
                    "children": [],
                    "classes": [],
-                   "customAttributes": {},
+                   "customAttributes": {
+                    "id": "comment-count"
+                   },
                    "dataKey": null,
-                   "dynamicValues": [],
+                   "dynamicValues": [
+                    {
+                     "comesFrom": "dataScript",
+                     "key": "post.comment_count",
+                     "property": "innerHTML",
+                     "type": "key"
+                    }
+                   ],
                    "element": "p",
                    "innerHTML": "<p>48</p>",
                    "mobileStyles": {},
@@ -2036,7 +2063,8 @@
                "baseStyles": {
                 "alignItems": "flex-start",
                 "display": "flex",
-                "flexDirection": "column",
+                "flexDirection": "row",
+                "gap": "6px",
                 "width": "100%"
                },
                "blockClientScript": "",
@@ -2048,7 +2076,7 @@
                  "activeState": null,
                  "attributes": {},
                  "baseStyles": {
-                  "color": "rgb(23, 23, 23)",
+                  "color": "var(--ink-gray-8)",
                   "fontSize": "16px",
                   "fontWeight": "600",
                   "letterSpacing": "0.24px",
@@ -2057,14 +2085,48 @@
                  "blockClientScript": "",
                  "blockDataScript": "",
                  "blockId": "4ffk6mq6w",
-                 "blockName": "Responses (48)",
+                 "blockName": "Responses count",
+                 "children": [],
+                 "classes": [],
+                 "customAttributes": {},
+                 "dataKey": null,
+                 "dynamicValues": [
+                  {
+                   "comesFrom": "dataScript",
+                   "key": "post.comment_count",
+                   "property": "innerHTML",
+                   "type": "key"
+                  }
+                 ],
+                 "element": "p",
+                 "innerHTML": "<p>Responses (48)</p>",
+                 "mobileStyles": {},
+                 "originalElement": "",
+                 "props": {},
+                 "rawStyles": {},
+                 "tabletStyles": {}
+                },
+                {
+                 "activeState": null,
+                 "attributes": {},
+                 "baseStyles": {
+                  "color": "var(--ink-gray-8)",
+                  "fontSize": "16px",
+                  "fontWeight": "600",
+                  "letterSpacing": "0.24px",
+                  "lineHeight": "115% "
+                 },
+                 "blockClientScript": "",
+                 "blockDataScript": "",
+                 "blockId": "oqr0qblwl",
+                 "blockName": "Responses",
                  "children": [],
                  "classes": [],
                  "customAttributes": {},
                  "dataKey": null,
                  "dynamicValues": [],
                  "element": "p",
-                 "innerHTML": "<p>Responses (48)</p>",
+                 "innerHTML": "<p>Responses</p>",
                  "mobileStyles": {},
                  "originalElement": "",
                  "props": {},
@@ -2096,10 +2158,10 @@
                 "position": "static",
                 "width": "100%"
                },
-               "blockClientScript": "",
+               "blockClientScript": "async function submitComment(postName) {\n\tconst commentInput = document.getElementById(\"comment-input\");\n\tconst content = commentInput?.value?.trim();\n\n\tif (!content) {\n\t\treturn;\n\t}\n\n\tconst url = \"/api/resource/Cafe Post Comment\";\n\n\tconst payload = {\n\t\tdoctype: \"Cafe Post Comment\",\n\t\tcontent: content,\n\t\tpost: postName,\n\t};\n\n\ttry {\n\t\tconst response = await fetch(url, {\n\t\t\tmethod: \"POST\",\n\t\t\theaders: {\n\t\t\t\t\"Content-Type\": \"application/json\",\n\t\t\t\t\"X-Frappe-CSRF-Token\": frappe.csrf_token || \"\",\n\t\t\t},\n\t\t\tbody: JSON.stringify(payload),\n\t\t});\n\n\t\tif (!response.ok) {\n\t\t\tconst error = await response.json();\n\t\t\tthrow new Error(error.message || \"Failed to submit comment\");\n\t\t}\n\n\t\tconst result = await response.json();\n\n\t\t// Clear the input after successful submission\n\t\tcommentInput.value = \"\";\n        window.location.reload()\n\t\t// Add the new comment to the list\n\t\t// addCommentToList(result.data);\n\n\t\treturn result;\n\t} catch (error) {\n\t\tconsole.error(\"Error submitting comment:\", error);\n\t\tthrow error;\n\t}\n}\n\nfunction addCommentToList(commentData) {\n\tconst commentsList = document.getElementById(\"comments-list\");\n\tif (!commentsList) return;\n\n\t// Get current user info from frappe\n\tconst userName = frappe.session_user || frappe.user?.name || \"Anonymous\";\n\tconst userImage = frappe.user?.image || \"/files/stock-image.jpg\";\n\n\t// Clone an existing comment to preserve dynamic builder classes\n\tconst existingComment = commentsList.querySelector(\"section\");\n\tif (!existingComment) return;\n\n\tconst newComment = existingComment.cloneNode(true);\n\n\t// Update user info\n\tconst userNameEl = newComment.querySelector(\".comment-user-name\");\n\tif (userNameEl) userNameEl.textContent = userName;\n\n\tconst userImgEl = newComment.querySelector(\".comment-user-image\");\n\tif (userImgEl) userImgEl.src = userImage;\n\n\t// Update content\n\tconst contentEl = newComment.querySelector(\".comment-content\");\n\tif (contentEl) contentEl.textContent = commentData.content;\n\n\t// Update creation time\n\tconst dateEl = newComment.querySelector(\".comment-creation-date\");\n\tif (dateEl) dateEl.textContent = \"just now\";\n\n\t// Reset like count\n\tconst likeCountEl = newComment.querySelector(\".comment-like-count\");\n\tif (likeCountEl) likeCountEl.textContent = \"0\";\n\n\t// Reset like icon to unfilled state\n\tconst likeIconPath = newComment.querySelector(\".comment-like-icon path\");\n\tif (likeIconPath) likeIconPath.setAttribute(\"fill\", \"#525252\");\n\n\t// Prepend the new comment to the list\n\tcommentsList.insertBefore(newComment, commentsList.firstChild);\n}\n\ndocument.getElementById(\"comment-submit-btn\")?.addEventListener(\"click\",  () =>{\n\tconst postId = this.getAttribute(\"post-id\");\n\tsubmitComment(postId);\n});\n\ndocument.getElementById(\"comment-input\")?.addEventListener(\"keydown\",  (event) =>{\n  if (event.key === \"Enter\") {\n    const postId = this.getAttribute(\"post-id\");\n\tsubmitComment(postId);\n  }\n})",
                "blockDataScript": "",
                "blockId": "ytfz1i1u3",
-               "blockName": "Frame 26",
+               "blockName": "Add comment section",
                "children": [
                 {
                  "activeState": null,
@@ -2115,6 +2177,7 @@
                   "fontSize": "14px",
                   "height": "100px",
                   "maxHeight": "150px",
+                  "minHeight": "100px",
                   "overflow": "hidden",
                   "overflowX": "hidden",
                   "overflowY": "hidden",
@@ -2124,9 +2187,12 @@
                  "blockClientScript": "",
                  "blockDataScript": "",
                  "blockId": "1o7lv4vl8",
+                 "blockName": "Comment input",
                  "children": [],
                  "classes": [],
-                 "customAttributes": {},
+                 "customAttributes": {
+                  "id": "comment-input"
+                 },
                  "dataKey": null,
                  "dynamicValues": [],
                  "element": "textarea",
@@ -2140,8 +2206,10 @@
                  "attributes": {},
                  "baseStyles": {
                   "alignItems": "center",
-                  "backgroundColor": "rgb(243, 243, 243)",
+                  "backgroundColor": "var(--ink-gray-1)",
+                  "border": "1px solid  #E2E2E2",
                   "borderRadius": " 8px",
+                  "boxSizing": "border-box",
                   "display": "flex",
                   "gap": "8px",
                   "justifyContent": "center",
@@ -2149,22 +2217,22 @@
                  },
                  "blockClientScript": "",
                  "blockDataScript": "",
-                 "blockId": "ng7ct2ujz",
+                 "blockId": "gyktynvyh",
                  "blockName": "button",
                  "children": [
                   {
                    "activeState": null,
                    "attributes": {},
                    "baseStyles": {
-                    "color": "rgb(56, 56, 56)",
-                    "fontSize": "13px",
+                    "color": "var(--ink-gray-8)",
+                    "fontSize": "14px",
                     "fontWeight": "420",
-                    "letterSpacing": "0.26px",
+                    "letterSpacing": "0.28px",
                     "lineHeight": "115% "
                    },
                    "blockClientScript": "",
                    "blockDataScript": "",
-                   "blockId": "x84dl1gqh",
+                   "blockId": "n3muwen3o",
                    "blockName": "Discover",
                    "children": [],
                    "classes": [],
@@ -2172,7 +2240,7 @@
                    "dataKey": null,
                    "dynamicValues": [],
                    "element": "p",
-                   "innerHTML": "<p>Comment</p>",
+                   "innerHTML": "<p>Submit</p>",
                    "mobileStyles": {},
                    "originalElement": "",
                    "props": {},
@@ -2180,11 +2248,15 @@
                    "tabletStyles": {}
                   }
                  ],
-                 "classes": [],
-                 "customAttributes": {},
+                 "classes": [
+                  ""
+                 ],
+                 "customAttributes": {
+                  "id": "comment-submit-btn"
+                 },
                  "dataKey": null,
                  "dynamicValues": [],
-                 "element": "div",
+                 "element": "button",
                  "innerHTML": "",
                  "mobileStyles": {},
                  "originalElement": "",
@@ -2194,7 +2266,9 @@
                 }
                ],
                "classes": [],
-               "customAttributes": {},
+               "customAttributes": {
+                "post-id": "{{ post.name }}"
+               },
                "dataKey": null,
                "dynamicValues": [],
                "element": "section",
@@ -2224,11 +2298,18 @@
                 {
                  "activeState": null,
                  "attributes": {},
-                 "baseStyles": {},
+                 "baseStyles": {
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "flexShrink": 0,
+                  "gap": "24px",
+                  "overflow": "hidden",
+                  "width": "100%"
+                 },
                  "blockClientScript": "",
                  "blockDataScript": "",
-                 "blockId": "9qirz0ft6",
-                 "blockName": "Post Comment",
+                 "blockId": "x6e3x7147",
+                 "blockName": "repeater",
                  "children": [
                   {
                    "activeState": null,
@@ -2236,8 +2317,8 @@
                    "baseStyles": {},
                    "blockClientScript": "",
                    "blockDataScript": "",
-                   "blockId": "7sgguvocb",
-                   "blockName": "Margin",
+                   "blockId": "y2kdpubh3",
+                   "blockName": "Post Comment",
                    "children": [
                     {
                      "activeState": null,
@@ -2245,8 +2326,8 @@
                      "baseStyles": {},
                      "blockClientScript": "",
                      "blockDataScript": "",
-                     "blockId": "enc22d7zx",
-                     "blockName": "avatar",
+                     "blockId": "cuxw76mnx",
+                     "blockName": "Margin",
                      "children": [
                       {
                        "activeState": null,
@@ -2254,73 +2335,8 @@
                        "baseStyles": {},
                        "blockClientScript": "",
                        "blockDataScript": "",
-                       "blockId": "kd574sjxc",
-                       "blockName": "avatar-image",
-                       "children": [],
-                       "classes": [],
-                       "customAttributes": {},
-                       "dataKey": null,
-                       "dynamicValues": [],
-                       "isChildOfComponent": "c59d99b6ba6f1027",
-                       "mobileStyles": {},
-                       "originalElement": "",
-                       "props": {},
-                       "rawStyles": {},
-                       "referenceBlockId": "7lua9vcfh",
-                       "tabletStyles": {}
-                      }
-                     ],
-                     "classes": [],
-                     "customAttributes": {},
-                     "dataKey": null,
-                     "dynamicValues": [],
-                     "isChildOfComponent": "c59d99b6ba6f1027",
-                     "mobileStyles": {},
-                     "originalElement": "",
-                     "props": {},
-                     "rawStyles": {},
-                     "referenceBlockId": "pox3dhmph",
-                     "tabletStyles": {}
-                    }
-                   ],
-                   "classes": [],
-                   "customAttributes": {},
-                   "dataKey": null,
-                   "dynamicValues": [],
-                   "isChildOfComponent": "c59d99b6ba6f1027",
-                   "mobileStyles": {},
-                   "originalElement": "",
-                   "props": {},
-                   "rawStyles": {},
-                   "referenceBlockId": "ghkj1l51o",
-                   "tabletStyles": {}
-                  },
-                  {
-                   "activeState": null,
-                   "attributes": {},
-                   "baseStyles": {},
-                   "blockClientScript": "",
-                   "blockDataScript": "",
-                   "blockId": "v50o9d8wv",
-                   "blockName": "Container",
-                   "children": [
-                    {
-                     "activeState": null,
-                     "attributes": {},
-                     "baseStyles": {},
-                     "blockClientScript": "",
-                     "blockDataScript": "",
-                     "blockId": "t2f3a2i73",
-                     "blockName": "Container",
-                     "children": [
-                      {
-                       "activeState": null,
-                       "attributes": {},
-                       "baseStyles": {},
-                       "blockClientScript": "",
-                       "blockDataScript": "",
-                       "blockId": "13ozqm50q",
-                       "blockName": "Container",
+                       "blockId": "utm8g1fle",
+                       "blockName": "avatar",
                        "children": [
                         {
                          "activeState": null,
@@ -2328,19 +2344,26 @@
                          "baseStyles": {},
                          "blockClientScript": "",
                          "blockDataScript": "",
-                         "blockId": "ci0jfamy5",
-                         "blockName": "John Smith",
+                         "blockId": "rnwiw2yb1",
+                         "blockName": "avatar-image",
                          "children": [],
                          "classes": [],
                          "customAttributes": {},
                          "dataKey": null,
-                         "dynamicValues": [],
+                         "dynamicValues": [
+                          {
+                           "comesFrom": "dataScript",
+                           "key": "user_image",
+                           "property": "src",
+                           "type": "attribute"
+                          }
+                         ],
                          "isChildOfComponent": "c59d99b6ba6f1027",
                          "mobileStyles": {},
                          "originalElement": "",
                          "props": {},
                          "rawStyles": {},
-                         "referenceBlockId": "vjgszxy19",
+                         "referenceBlockId": "7lua9vcfh",
                          "tabletStyles": {}
                         }
                        ],
@@ -2353,16 +2376,38 @@
                        "originalElement": "",
                        "props": {},
                        "rawStyles": {},
-                       "referenceBlockId": "2247fdpic",
+                       "referenceBlockId": "pox3dhmph",
                        "tabletStyles": {}
-                      },
+                      }
+                     ],
+                     "classes": [],
+                     "customAttributes": {},
+                     "dataKey": null,
+                     "dynamicValues": [],
+                     "isChildOfComponent": "c59d99b6ba6f1027",
+                     "mobileStyles": {},
+                     "originalElement": "",
+                     "props": {},
+                     "rawStyles": {},
+                     "referenceBlockId": "ghkj1l51o",
+                     "tabletStyles": {}
+                    },
+                    {
+                     "activeState": null,
+                     "attributes": {},
+                     "baseStyles": {},
+                     "blockClientScript": "",
+                     "blockDataScript": "",
+                     "blockId": "4qf9khqg1",
+                     "blockName": "Container",
+                     "children": [
                       {
                        "activeState": null,
                        "attributes": {},
                        "baseStyles": {},
                        "blockClientScript": "",
                        "blockDataScript": "",
-                       "blockId": "xoly55g2i",
+                       "blockId": "yzg9lrcn8",
                        "blockName": "Container",
                        "children": [
                         {
@@ -2371,9 +2416,38 @@
                          "baseStyles": {},
                          "blockClientScript": "",
                          "blockDataScript": "",
-                         "blockId": "i74peylsb",
-                         "blockName": "2 hours ago",
-                         "children": [],
+                         "blockId": "pc2s0syy7",
+                         "blockName": "Container",
+                         "children": [
+                          {
+                           "activeState": null,
+                           "attributes": {},
+                           "baseStyles": {},
+                           "blockClientScript": "",
+                           "blockDataScript": "",
+                           "blockId": "xoct5uvaz",
+                           "blockName": "John Smith",
+                           "children": [],
+                           "classes": [],
+                           "customAttributes": {},
+                           "dataKey": null,
+                           "dynamicValues": [
+                            {
+                             "comesFrom": "dataScript",
+                             "key": "full_name",
+                             "property": "innerHTML",
+                             "type": "key"
+                            }
+                           ],
+                           "isChildOfComponent": "c59d99b6ba6f1027",
+                           "mobileStyles": {},
+                           "originalElement": "",
+                           "props": {},
+                           "rawStyles": {},
+                           "referenceBlockId": "vjgszxy19",
+                           "tabletStyles": {}
+                          }
+                         ],
                          "classes": [],
                          "customAttributes": {},
                          "dataKey": null,
@@ -2383,115 +2457,7 @@
                          "originalElement": "",
                          "props": {},
                          "rawStyles": {},
-                         "referenceBlockId": "immndp0im",
-                         "tabletStyles": {}
-                        }
-                       ],
-                       "classes": [],
-                       "customAttributes": {},
-                       "dataKey": null,
-                       "dynamicValues": [],
-                       "isChildOfComponent": "c59d99b6ba6f1027",
-                       "mobileStyles": {},
-                       "originalElement": "",
-                       "props": {},
-                       "rawStyles": {},
-                       "referenceBlockId": "voemjufo1",
-                       "tabletStyles": {}
-                      }
-                     ],
-                     "classes": [],
-                     "customAttributes": {},
-                     "dataKey": null,
-                     "dynamicValues": [],
-                     "isChildOfComponent": "c59d99b6ba6f1027",
-                     "mobileStyles": {},
-                     "originalElement": "",
-                     "props": {},
-                     "rawStyles": {},
-                     "referenceBlockId": "tssuwiaow",
-                     "tabletStyles": {}
-                    },
-                    {
-                     "activeState": null,
-                     "attributes": {},
-                     "baseStyles": {},
-                     "blockClientScript": "",
-                     "blockDataScript": "",
-                     "blockId": "5785rbm9y",
-                     "blockName": "Container",
-                     "children": [
-                      {
-                       "activeState": null,
-                       "attributes": {},
-                       "baseStyles": {},
-                       "blockClientScript": "",
-                       "blockDataScript": "",
-                       "blockId": "zd1j402ok",
-                       "blockName": "This is exactly what I needed to read today. The point about white space being an \"active element\" really resonated with me. Great article!",
-                       "children": [],
-                       "classes": [],
-                       "customAttributes": {},
-                       "dataKey": null,
-                       "dynamicValues": [],
-                       "isChildOfComponent": "c59d99b6ba6f1027",
-                       "mobileStyles": {},
-                       "originalElement": "",
-                       "props": {},
-                       "rawStyles": {},
-                       "referenceBlockId": "fy4fowu7d",
-                       "tabletStyles": {}
-                      }
-                     ],
-                     "classes": [],
-                     "customAttributes": {},
-                     "dataKey": null,
-                     "dynamicValues": [],
-                     "isChildOfComponent": "c59d99b6ba6f1027",
-                     "mobileStyles": {},
-                     "originalElement": "",
-                     "props": {},
-                     "rawStyles": {},
-                     "referenceBlockId": "n2bf3kn05",
-                     "tabletStyles": {}
-                    },
-                    {
-                     "activeState": null,
-                     "attributes": {},
-                     "baseStyles": {},
-                     "blockClientScript": "",
-                     "blockDataScript": "",
-                     "blockId": "lm8ft3wju",
-                     "blockName": "Container",
-                     "children": [
-                      {
-                       "activeState": null,
-                       "attributes": {},
-                       "baseStyles": {},
-                       "blockClientScript": "",
-                       "blockDataScript": "",
-                       "blockId": "88zgmrexo",
-                       "blockName": "Button",
-                       "children": [
-                        {
-                         "activeState": null,
-                         "attributes": {},
-                         "baseStyles": {},
-                         "blockClientScript": "",
-                         "blockDataScript": "",
-                         "blockId": "oaa08ojjk",
-                         "blockName": "icon/line/like",
-                         "children": [],
-                         "classes": [],
-                         "customAttributes": {},
-                         "dataKey": null,
-                         "dynamicValues": [],
-                         "isChildOfComponent": "c59d99b6ba6f1027",
-                         "mobileStyles": {},
-                         "originalElement": "__raw_html__",
-                         "props": {},
-                         "rawStyles": {},
-                         "referenceBlockId": "ogfhig0z0",
+                         "referenceBlockId": "2247fdpic",
                          "tabletStyles": {}
                         },
                         {
@@ -2500,9 +2466,38 @@
                          "baseStyles": {},
                          "blockClientScript": "",
                          "blockDataScript": "",
-                         "blockId": "9n82i3ngp",
-                         "blockName": "12",
-                         "children": [],
+                         "blockId": "st2s6otql",
+                         "blockName": "Container",
+                         "children": [
+                          {
+                           "activeState": null,
+                           "attributes": {},
+                           "baseStyles": {},
+                           "blockClientScript": "",
+                           "blockDataScript": "",
+                           "blockId": "6doub1tpw",
+                           "blockName": "2 hours ago",
+                           "children": [],
+                           "classes": [],
+                           "customAttributes": {},
+                           "dataKey": null,
+                           "dynamicValues": [
+                            {
+                             "comesFrom": "dataScript",
+                             "key": "time_ago",
+                             "property": "innerHTML",
+                             "type": "key"
+                            }
+                           ],
+                           "isChildOfComponent": "c59d99b6ba6f1027",
+                           "mobileStyles": {},
+                           "originalElement": "",
+                           "props": {},
+                           "rawStyles": {},
+                           "referenceBlockId": "immndp0im",
+                           "tabletStyles": {}
+                          }
+                         ],
                          "classes": [],
                          "customAttributes": {},
                          "dataKey": null,
@@ -2512,7 +2507,7 @@
                          "originalElement": "",
                          "props": {},
                          "rawStyles": {},
-                         "referenceBlockId": "pwmntrdyn",
+                         "referenceBlockId": "voemjufo1",
                          "tabletStyles": {}
                         }
                        ],
@@ -2525,7 +2520,7 @@
                        "originalElement": "",
                        "props": {},
                        "rawStyles": {},
-                       "referenceBlockId": "ui14blrdh",
+                       "referenceBlockId": "tssuwiaow",
                        "tabletStyles": {}
                       },
                       {
@@ -2534,8 +2529,8 @@
                        "baseStyles": {},
                        "blockClientScript": "",
                        "blockDataScript": "",
-                       "blockId": "15qoxe082",
-                       "blockName": "Button",
+                       "blockId": "e28ulb62l",
+                       "blockName": "Container",
                        "children": [
                         {
                          "activeState": null,
@@ -2543,19 +2538,26 @@
                          "baseStyles": {},
                          "blockClientScript": "",
                          "blockDataScript": "",
-                         "blockId": "ksta76l25",
-                         "blockName": "Reply",
+                         "blockId": "mdp4tnuwl",
+                         "blockName": "This is exactly what I needed to read today. The point about white space being an \"active element\" really resonated with me. Great article!",
                          "children": [],
                          "classes": [],
                          "customAttributes": {},
                          "dataKey": null,
-                         "dynamicValues": [],
+                         "dynamicValues": [
+                          {
+                           "comesFrom": "dataScript",
+                           "key": "content",
+                           "property": "innerHTML",
+                           "type": "key"
+                          }
+                         ],
                          "isChildOfComponent": "c59d99b6ba6f1027",
                          "mobileStyles": {},
                          "originalElement": "",
                          "props": {},
                          "rawStyles": {},
-                         "referenceBlockId": "6c06zbq2v",
+                         "referenceBlockId": "fy4fowu7d",
                          "tabletStyles": {}
                         }
                        ],
@@ -2568,7 +2570,144 @@
                        "originalElement": "",
                        "props": {},
                        "rawStyles": {},
-                       "referenceBlockId": "eafftk8ew",
+                       "referenceBlockId": "n2bf3kn05",
+                       "tabletStyles": {}
+                      },
+                      {
+                       "activeState": null,
+                       "attributes": {},
+                       "baseStyles": {},
+                       "blockClientScript": "",
+                       "blockDataScript": "",
+                       "blockId": "lu4xalzby",
+                       "blockName": "Container",
+                       "children": [
+                        {
+                         "activeState": null,
+                         "attributes": {},
+                         "baseStyles": {},
+                         "blockClientScript": "",
+                         "blockDataScript": "",
+                         "blockId": "kl9y17v6e",
+                         "blockName": "Button",
+                         "children": [
+                          {
+                           "activeState": null,
+                           "attributes": {},
+                           "baseStyles": {},
+                           "blockClientScript": "",
+                           "blockDataScript": "",
+                           "blockId": "qvssogjdc",
+                           "blockName": "icon/line/like",
+                           "children": [],
+                           "classes": [],
+                           "customAttributes": {},
+                           "dataKey": null,
+                           "dynamicValues": [],
+                           "isChildOfComponent": "c59d99b6ba6f1027",
+                           "mobileStyles": {},
+                           "originalElement": "__raw_html__",
+                           "props": {},
+                           "rawStyles": {},
+                           "referenceBlockId": "ogfhig0z0",
+                           "tabletStyles": {}
+                          },
+                          {
+                           "activeState": null,
+                           "attributes": {},
+                           "baseStyles": {},
+                           "blockClientScript": "",
+                           "blockDataScript": "",
+                           "blockId": "1wr3mg7zz",
+                           "blockName": "12",
+                           "children": [],
+                           "classes": [],
+                           "customAttributes": {},
+                           "dataKey": null,
+                           "dynamicValues": [
+                            {
+                             "comesFrom": "dataScript",
+                             "key": "likes",
+                             "property": "innerHTML",
+                             "type": "key"
+                            }
+                           ],
+                           "innerHTML": "",
+                           "isChildOfComponent": "c59d99b6ba6f1027",
+                           "mobileStyles": {},
+                           "originalElement": "",
+                           "props": {},
+                           "rawStyles": {},
+                           "referenceBlockId": "pwmntrdyn",
+                           "tabletStyles": {}
+                          }
+                         ],
+                         "classes": [],
+                         "customAttributes": {},
+                         "dataKey": null,
+                         "dynamicValues": [],
+                         "isChildOfComponent": "c59d99b6ba6f1027",
+                         "mobileStyles": {},
+                         "originalElement": "",
+                         "props": {},
+                         "rawStyles": {},
+                         "referenceBlockId": "ui14blrdh",
+                         "tabletStyles": {}
+                        },
+                        {
+                         "activeState": null,
+                         "attributes": {},
+                         "baseStyles": {},
+                         "blockClientScript": "",
+                         "blockDataScript": "",
+                         "blockId": "ezs0j48im",
+                         "blockName": "Button",
+                         "children": [
+                          {
+                           "activeState": null,
+                           "attributes": {},
+                           "baseStyles": {},
+                           "blockClientScript": "",
+                           "blockDataScript": "",
+                           "blockId": "ru8aojaln",
+                           "blockName": "Reply",
+                           "children": [],
+                           "classes": [],
+                           "customAttributes": {},
+                           "dataKey": null,
+                           "dynamicValues": [],
+                           "isChildOfComponent": "c59d99b6ba6f1027",
+                           "mobileStyles": {},
+                           "originalElement": "",
+                           "props": {},
+                           "rawStyles": {},
+                           "referenceBlockId": "6c06zbq2v",
+                           "tabletStyles": {}
+                          }
+                         ],
+                         "classes": [],
+                         "customAttributes": {},
+                         "dataKey": null,
+                         "dynamicValues": [],
+                         "isChildOfComponent": "c59d99b6ba6f1027",
+                         "mobileStyles": {},
+                         "originalElement": "",
+                         "props": {},
+                         "rawStyles": {},
+                         "referenceBlockId": "eafftk8ew",
+                         "tabletStyles": {}
+                        }
+                       ],
+                       "classes": [],
+                       "customAttributes": {},
+                       "dataKey": null,
+                       "dynamicValues": [],
+                       "isChildOfComponent": "c59d99b6ba6f1027",
+                       "mobileStyles": {},
+                       "originalElement": "",
+                       "props": {},
+                       "rawStyles": {},
+                       "referenceBlockId": "qag1a9ch2",
                        "tabletStyles": {}
                       }
                      ],
@@ -2581,7 +2720,7 @@
                      "originalElement": "",
                      "props": {},
                      "rawStyles": {},
-                     "referenceBlockId": "qag1a9ch2",
+                     "referenceBlockId": "89b4y1f62",
                      "tabletStyles": {}
                     }
                    ],
@@ -2589,30 +2728,586 @@
                    "customAttributes": {},
                    "dataKey": null,
                    "dynamicValues": [],
-                   "isChildOfComponent": "c59d99b6ba6f1027",
+                   "extendedFromComponent": "c59d99b6ba6f1027",
                    "mobileStyles": {},
                    "originalElement": "",
                    "props": {},
                    "rawStyles": {},
-                   "referenceBlockId": "89b4y1f62",
+                   "tabletStyles": {}
+                  },
+                  {
+                   "activeState": null,
+                   "attributes": {},
+                   "baseStyles": {
+                    "alignItems": "flex-start",
+                    "alignSelf": "stretch",
+                    "display": "flex",
+                    "gap": "16px",
+                    "width": "100%"
+                   },
+                   "blockClientScript": "",
+                   "blockDataScript": "",
+                   "blockId": "8qovug7x3",
+                   "blockName": "Post Comment",
+                   "children": [
+                    {
+                     "activeState": null,
+                     "attributes": {},
+                     "baseStyles": {
+                      "alignItems": "flex-start",
+                      "display": "flex",
+                      "flexDirection": "column",
+                      "height": "44px",
+                      "paddingTop": "4px",
+                      "width": "40px"
+                     },
+                     "blockClientScript": "",
+                     "blockDataScript": "",
+                     "blockId": "pw89jmeoq",
+                     "blockName": "Margin",
+                     "children": [
+                      {
+                       "activeState": null,
+                       "attributes": {},
+                       "baseStyles": {
+                        "alignItems": "center",
+                        "borderRadius": " 100px",
+                        "display": "flex",
+                        "flexDirection": "column",
+                        "gap": "8px",
+                        "justifyContent": "center"
+                       },
+                       "blockClientScript": "",
+                       "blockDataScript": "",
+                       "blockId": "hz4rjf5do",
+                       "blockName": "avatar",
+                       "children": [
+                        {
+                         "activeState": null,
+                         "attributes": {
+                          "src": ""
+                         },
+                         "baseStyles": {
+                          "backgroundColor": "rgb(29, 219, 194)",
+                          "borderRadius": "100px",
+                          "height": "40px",
+                          "objectFit": "cover",
+                          "width": "40px"
+                         },
+                         "blockClientScript": "",
+                         "blockDataScript": "",
+                         "blockId": "9nr3tm9jh",
+                         "blockName": "avatar-image",
+                         "children": [],
+                         "classes": [
+                          "comment-user-image"
+                         ],
+                         "customAttributes": {},
+                         "dataKey": null,
+                         "dynamicValues": [
+                          {
+                           "comesFrom": "dataScript",
+                           "key": "user_image",
+                           "property": "src",
+                           "type": "attribute"
+                          }
+                         ],
+                         "element": "img",
+                         "innerHTML": "",
+                         "mobileStyles": {},
+                         "originalElement": "",
+                         "props": {},
+                         "rawStyles": {},
+                         "tabletStyles": {}
+                        }
+                       ],
+                       "classes": [],
+                       "customAttributes": {},
+                       "dataKey": null,
+                       "dynamicValues": [],
+                       "element": "div",
+                       "innerHTML": "",
+                       "mobileStyles": {},
+                       "originalElement": "",
+                       "props": {},
+                       "rawStyles": {},
+                       "tabletStyles": {}
+                      }
+                     ],
+                     "classes": [],
+                     "customAttributes": {},
+                     "dataKey": null,
+                     "dynamicValues": [],
+                     "element": "section",
+                     "innerHTML": "",
+                     "mobileStyles": {},
+                     "originalElement": "",
+                     "props": {},
+                     "rawStyles": {},
+                     "tabletStyles": {}
+                    },
+                    {
+                     "activeState": null,
+                     "attributes": {},
+                     "baseStyles": {
+                      "alignItems": "flex-start",
+                      "alignSelf": "stretch",
+                      "display": "flex",
+                      "flexDirection": "column",
+                      "gap": "2.9px",
+                      "width": "496px"
+                     },
+                     "blockClientScript": "",
+                     "blockDataScript": "",
+                     "blockId": "hs39dtc6y",
+                     "blockName": "Container",
+                     "children": [
+                      {
+                       "activeState": null,
+                       "attributes": {},
+                       "baseStyles": {
+                        "alignItems": "center",
+                        "alignSelf": "stretch",
+                        "display": "flex",
+                        "gap": "8px",
+                        "width": "100%"
+                       },
+                       "blockClientScript": "",
+                       "blockDataScript": "",
+                       "blockId": "42h6qbfpx",
+                       "blockName": "Container",
+                       "children": [
+                        {
+                         "activeState": null,
+                         "attributes": {},
+                         "baseStyles": {
+                          "alignItems": "flex-start",
+                          "display": "flex",
+                          "flexDirection": "column"
+                         },
+                         "blockClientScript": "",
+                         "blockDataScript": "",
+                         "blockId": "ac61fgcit",
+                         "blockName": "Container",
+                         "children": [
+                          {
+                           "activeState": null,
+                           "attributes": {},
+                           "baseStyles": {
+                            "color": "var(--ink-gray-8)",
+                            "fontSize": "13px",
+                            "fontWeight": "600",
+                            "letterSpacing": "0.195px",
+                            "lineHeight": "150% "
+                           },
+                           "blockClientScript": "",
+                           "blockDataScript": "",
+                           "blockId": "1qb4syh9o",
+                           "blockName": "John Smith",
+                           "children": [],
+                           "classes": [
+                            "comment-user-name"
+                           ],
+                           "customAttributes": {},
+                           "dataKey": null,
+                           "dynamicValues": [
+                            {
+                             "comesFrom": "dataScript",
+                             "key": "full_name",
+                             "property": "innerHTML",
+                             "type": "key"
+                            }
+                           ],
+                           "element": "p",
+                           "innerHTML": "<p>John Smith</p>",
+                           "mobileStyles": {},
+                           "originalElement": "",
+                           "props": {},
+                           "rawStyles": {},
+                           "tabletStyles": {}
+                          }
+                         ],
+                         "classes": [],
+                         "customAttributes": {},
+                         "dataKey": null,
+                         "dynamicValues": [],
+                         "element": "section",
+                         "innerHTML": "",
+                         "mobileStyles": {},
+                         "originalElement": "",
+                         "props": {},
+                         "rawStyles": {},
+                         "tabletStyles": {}
+                        },
+                        {
+                         "activeState": null,
+                         "attributes": {},
+                         "baseStyles": {
+                          "alignItems": "flex-start",
+                          "display": "flex",
+                          "flexDirection": "column"
+                         },
+                         "blockClientScript": "",
+                         "blockDataScript": "",
+                         "blockId": "sxg43ju12",
+                         "blockName": "Container",
+                         "children": [
+                          {
+                           "activeState": null,
+                           "attributes": {},
+                           "baseStyles": {
+                            "color": "var(--ink-gray-6)",
+                            "fontSize": "12px",
+                            "fontWeight": "400",
+                            "letterSpacing": "0.24px",
+                            "lineHeight": "115% "
+                           },
+                           "blockClientScript": "",
+                           "blockDataScript": "",
+                           "blockId": "f2g9ac0eg",
+                           "blockName": "2 hours ago",
+                           "children": [],
+                           "classes": [
+                            "comment-creation-date"
+                           ],
+                           "customAttributes": {},
+                           "dataKey": null,
+                           "dynamicValues": [
+                            {
+                             "comesFrom": "dataScript",
+                             "key": "time_ago",
+                             "property": "innerHTML",
+                             "type": "key"
+                            }
+                           ],
+                           "element": "p",
+                           "innerHTML": "<p>2 hours ago</p>",
+                           "mobileStyles": {},
+                           "originalElement": "",
+                           "props": {},
+                           "rawStyles": {},
+                           "tabletStyles": {}
+                          }
+                         ],
+                         "classes": [],
+                         "customAttributes": {},
+                         "dataKey": null,
+                         "dynamicValues": [],
+                         "element": "section",
+                         "innerHTML": "",
+                         "mobileStyles": {},
+                         "originalElement": "",
+                         "props": {},
+                         "rawStyles": {},
+                         "tabletStyles": {}
+                        }
+                       ],
+                       "classes": [],
+                       "customAttributes": {},
+                       "dataKey": null,
+                       "dynamicValues": [],
+                       "element": "section",
+                       "innerHTML": "",
+                       "mobileStyles": {},
+                       "originalElement": "",
+                       "props": {},
+                       "rawStyles": {},
+                       "tabletStyles": {}
+                      },
+                      {
+                       "activeState": null,
+                       "attributes": {},
+                       "baseStyles": {
+                        "alignItems": "flex-start",
+                        "alignSelf": "stretch",
+                        "display": "flex",
+                        "flexDirection": "column",
+                        "paddingBottom": "0.625px",
+                        "width": "100%"
+                       },
+                       "blockClientScript": "",
+                       "blockDataScript": "",
+                       "blockId": "12y0at0r9",
+                       "blockName": "Container",
+                       "children": [
+                        {
+                         "activeState": null,
+                         "attributes": {},
+                         "baseStyles": {
+                          "alignSelf": "stretch",
+                          "color": "var(--ink-gray-7)",
+                          "fontSize": "13px",
+                          "fontWeight": "400",
+                          "letterSpacing": "0.195px",
+                          "lineHeight": "150% "
+                         },
+                         "blockClientScript": "",
+                         "blockDataScript": "",
+                         "blockId": "jjq62kepe",
+                         "blockName": "This is exactly what I needed to read today. The point about white space being an \"active element\" really resonated with me. Great article!",
+                         "children": [],
+                         "classes": [
+                          "comment-content"
+                         ],
+                         "customAttributes": {},
+                         "dataKey": null,
+                         "dynamicValues": [
+                          {
+                           "comesFrom": "dataScript",
+                           "key": "content",
+                           "property": "innerHTML",
+                           "type": "key"
+                          }
+                         ],
+                         "element": "p",
+                         "innerHTML": "<p>This is exactly what I needed to read today. The point about white space being an \"active element\" really resonated with me. Great article!</p>",
+                         "mobileStyles": {},
+                         "originalElement": "",
+                         "props": {},
+                         "rawStyles": {},
+                         "tabletStyles": {}
+                        }
+                       ],
+                       "classes": [],
+                       "customAttributes": {},
+                       "dataKey": null,
+                       "dynamicValues": [],
+                       "element": "section",
+                       "innerHTML": "",
+                       "mobileStyles": {},
+                       "originalElement": "",
+                       "props": {},
+                       "rawStyles": {},
+                       "tabletStyles": {}
+                      },
+                      {
+                       "activeState": null,
+                       "attributes": {},
+                       "baseStyles": {
+                        "alignItems": "center",
+                        "alignSelf": "stretch",
+                        "display": "flex",
+                        "gap": "16px",
+                        "paddingTop": "7.1px",
+                        "width": "100%"
+                       },
+                       "blockClientScript": "",
+                       "blockDataScript": "",
+                       "blockId": "3fe4ggtru",
+                       "blockName": "Container",
+                       "children": [
+                        {
+                         "activeState": null,
+                         "attributes": {},
+                         "baseStyles": {
+                          "alignItems": "center",
+                          "display": "flex",
+                          "gap": "4px",
+                          "justifyContent": "flex-start"
+                         },
+                         "blockClientScript": "",
+                         "blockDataScript": "",
+                         "blockId": "rm4yi513m",
+                         "blockName": "Button",
+                         "children": [
+                          {
+                           "activeState": null,
+                           "attributes": {},
+                           "baseStyles": {
+                            "height": "15px",
+                            "width": "15px"
+                           },
+                           "blockClientScript": "",
+                           "blockDataScript": "",
+                           "blockId": "0owd1epai",
+                           "blockName": "icon/line/like",
+                           "children": [],
+                           "classes": [
+                            "comment-like-icon"
+                           ],
+                           "customAttributes": {},
+                           "dataKey": null,
+                           "dynamicValues": [],
+                           "element": "svg",
+                           "innerHTML": "<svg width=\"15\" height=\"15\" viewBox=\"0 0 15 15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<g clip-path=\"url(#clip0_296_2879)\">\n<path d=\"M4.96992 14.1709C3.96134 14.0686 3.17406 13.2172 3.17402 12.1816V7.14746L3.18183 7.02344C3.1973 6.89987 3.23624 6.77996 3.29609 6.66992L6.19355 1.3418L6.2668 1.22656C6.42693 1.009 6.66906 0.865705 6.93672 0.829102L7.07246 0.819336H7.1916L7.3957 0.830078C8.33714 0.925533 9.08527 1.67384 9.18086 2.61523L9.1916 2.81934V5.07129H11.7375L11.8693 5.0752C13.2176 5.16063 14.1101 6.55259 13.59 7.82715L11.5051 12.9375C11.2171 13.643 10.5552 14.1191 9.8039 14.1758L9.65254 14.1816H5.17402L4.96992 14.1709ZM9.65254 13.1816C10.0588 13.1816 10.4247 12.9356 10.5783 12.5596L12.6643 7.44922C12.9326 6.79147 12.4479 6.07132 11.7375 6.07129H9.1916C8.63938 6.07129 8.19169 5.62349 8.1916 5.07129V2.81934C8.19143 2.26721 7.74375 1.81936 7.1916 1.81934H7.07246L4.17402 7.14746V12.1816C4.17406 12.7338 4.62183 13.1816 5.17402 13.1816H9.65254ZM1.66719 14.0869C1.39118 14.0868 1.16719 13.863 1.16719 13.5869V7.50781C1.16734 7.2319 1.39128 7.00797 1.66719 7.00781C1.94323 7.00781 2.16703 7.2318 2.16719 7.50781V13.5869C2.16719 13.8631 1.94333 14.0869 1.66719 14.0869Z\" fill=\"#525252\"/>\n</g>\n<defs>\n<clipPath id=\"clip0_296_2879\">\n<rect width=\"15\" height=\"15\" fill=\"white\"/>\n</clipPath>\n</defs>\n</svg>\n",
+                           "mobileStyles": {},
+                           "originalElement": "__raw_html__",
+                           "props": {},
+                           "rawStyles": {
+                            "aspectRatio": "1/1"
+                           },
+                           "tabletStyles": {}
+                          },
+                          {
+                           "activeState": null,
+                           "attributes": {},
+                           "baseStyles": {
+                            "color": "rgb(82, 82, 82)",
+                            "fontSize": "12px",
+                            "fontWeight": "420",
+                            "letterSpacing": "0.24px",
+                            "lineHeight": "115% ",
+                            "textAlign": "center"
+                           },
+                           "blockClientScript": "",
+                           "blockDataScript": "",
+                           "blockId": "ejz0opfad",
+                           "blockName": "12",
+                           "children": [],
+                           "classes": [
+                            "comment-like-count"
+                           ],
+                           "customAttributes": {},
+                           "dataKey": null,
+                           "dynamicValues": [
+                            {
+                             "comesFrom": "dataScript",
+                             "key": "likes",
+                             "property": "innerHTML",
+                             "type": "key"
+                            }
+                           ],
+                           "element": "p",
+                           "innerHTML": "<p>12</p>",
+                           "mobileStyles": {},
+                           "originalElement": "",
+                           "props": {},
+                           "rawStyles": {},
+                           "tabletStyles": {}
+                          }
+                         ],
+                         "classes": [],
+                         "customAttributes": {},
+                         "dataKey": null,
+                         "dynamicValues": [],
+                         "element": "section",
+                         "innerHTML": "",
+                         "mobileStyles": {},
+                         "originalElement": "",
+                         "props": {},
+                         "rawStyles": {},
+                         "tabletStyles": {}
+                        },
+                        {
+                         "activeState": null,
+                         "attributes": {},
+                         "baseStyles": {
+                          "alignItems": "center",
+                          "display": "flex",
+                          "flexDirection": "column",
+                          "justifyContent": "center"
+                         },
+                         "blockClientScript": "",
+                         "blockDataScript": "",
+                         "blockId": "plh6k4ov2",
+                         "blockName": "Button",
+                         "children": [
+                          {
+                           "activeState": null,
+                           "attributes": {},
+                           "baseStyles": {
+                            "color": "rgb(82, 82, 82)",
+                            "fontSize": "12px",
+                            "fontWeight": "420",
+                            "letterSpacing": "0.24px",
+                            "lineHeight": "115% ",
+                            "textAlign": "center"
+                           },
+                           "blockClientScript": "",
+                           "blockDataScript": "",
+                           "blockId": "w7y9rq8jl",
+                           "blockName": "Reply",
+                           "children": [],
+                           "classes": [
+                            "comment-reply-btn"
+                           ],
+                           "customAttributes": {},
+                           "dataKey": null,
+                           "dynamicValues": [],
+                           "element": "p",
+                           "innerHTML": "<p>Reply</p>",
+                           "mobileStyles": {},
+                           "originalElement": "",
+                           "props": {},
+                           "rawStyles": {},
+                           "tabletStyles": {}
+                          }
+                         ],
+                         "classes": [],
+                         "customAttributes": {},
+                         "dataKey": null,
+                         "dynamicValues": [],
+                         "element": "section",
+                         "innerHTML": "",
+                         "mobileStyles": {},
+                         "originalElement": "",
+                         "props": {},
+                         "rawStyles": {},
+                         "tabletStyles": {}
+                        }
+                       ],
+                       "classes": [],
+                       "customAttributes": {},
+                       "dataKey": null,
+                       "dynamicValues": [],
+                       "element": "section",
+                       "innerHTML": "",
+                       "mobileStyles": {},
+                       "originalElement": "",
+                       "props": {},
+                       "rawStyles": {},
+                       "tabletStyles": {}
+                      }
+                     ],
+                     "classes": [],
+                     "customAttributes": {},
+                     "dataKey": null,
+                     "dynamicValues": [],
+                     "element": "section",
+                     "innerHTML": "",
+                     "mobileStyles": {},
+                     "originalElement": "",
+                     "props": {},
+                     "rawStyles": {
+                      "flex": "1 0 0"
+                     },
+                     "tabletStyles": {}
+                    }
+                   ],
+                   "classes": [],
+                   "customAttributes": {},
+                   "dataKey": null,
+                   "dynamicValues": [],
+                   "element": "section",
+                   "innerHTML": "",
+                   "mobileStyles": {},
+                   "originalElement": "",
+                   "props": {},
+                   "rawStyles": {},
                    "tabletStyles": {}
                   }
                  ],
                  "classes": [],
                  "customAttributes": {},
-                 "dataKey": null,
+                 "dataKey": {
+                  "comesFrom": "dataScript",
+                  "key": "post.comments",
+                  "property": "innerHTML",
+                  "type": "key"
+                 },
                  "dynamicValues": [],
-                 "editable": false,
-                 "extendedFromComponent": "c59d99b6ba6f1027",
+                 "element": "div",
+                 "isRepeaterBlock": true,
                  "mobileStyles": {},
-                 "originalElement": "",
                  "props": {},
                  "rawStyles": {},
                  "tabletStyles": {}
                 }
                ],
                "classes": [],
-               "customAttributes": {},
+               "customAttributes": {
+                "id": "comments-list"
+               },
                "dataKey": null,
                "dynamicValues": [],
                "element": "section",
@@ -2673,7 +3368,7 @@
                    "dataKey": null,
                    "dynamicValues": [],
                    "element": "p",
-                   "innerHTML": "<p>Show more comments</p>",
+                   "innerHTML": "Load more",
                    "mobileStyles": {},
                    "originalElement": "",
                    "props": {},
@@ -2685,7 +3380,7 @@
                  "customAttributes": {},
                  "dataKey": null,
                  "dynamicValues": [],
-                 "element": "div",
+                 "element": "button",
                  "innerHTML": "",
                  "mobileStyles": {},
                  "originalElement": "",
@@ -2704,7 +3399,11 @@
                "originalElement": "",
                "props": {},
                "rawStyles": {},
-               "tabletStyles": {}
+               "tabletStyles": {},
+               "visibilityCondition": {
+                "comesFrom": "dataScript",
+                "key": "post.comment_count"
+               }
               }
              ],
              "classes": [],
@@ -2795,7 +3494,11 @@
    "visibilityCondition": null
   }
  ],
- "client_scripts": [],
+ "client_scripts": [
+  {
+   "builder_script": "Subscribe button interactivity"
+  }
+ ],
  "creation": "2026-04-22 12:56:28.669949",
  "disable_indexing": 0,
  "docstatus": 0,
@@ -2805,14 +3508,14 @@
  "idx": 0,
  "is_standard": 1,
  "is_template": 0,
- "modified": "2026-04-26 22:19:22.351672",
+ "modified": "2026-04-27 18:03:45.499640",
  "modified_by": "Administrator",
  "name": "page-b301f073",
  "owner": "Administrator",
- "page_data_script": "slug = frappe.form_dict.slug\n\npost_exists = frappe.db.exists(\"Cafe Post\",{\"slug\":slug})\n\nif not post_exists:\n  raise frappe.PageDoesNotExistError\n\npost = frappe.get_doc(\"Cafe Post\", {\"slug\": slug})\n\ndt = frappe.utils.getdate(post.creation)\nmonths = [\"Jan\", \"Feb\", \"Mar\", \"Apr\", \"May\", \"Jun\", \"Jul\", \"Aug\", \"Sep\", \"Oct\", \"Nov\", \"Dec\"]\npost.creation = f\"{months[dt.month - 1]} {dt.day} {dt.year}\"\n\ndata.post = {\n    \"name\": post.name,\n    \"title\": post.title,\n    \"content\": post.content,\n    \"cover_image\": post.cover_image,\n    \"reading_time\": post.reading_time,\n    \"creation\":post.creation,\n    \"tags\": post.tags\n}\n\nif post.publisher:\n  author = frappe.db.get_value(\"Cafe Publication\", post.publisher,['title','handle','description','image'], as_dict=1)\nelse:\n  user = frappe.db.get_value(\"User\", post.owner,['user_image','full_name'],as_dict=1)\n  author = frappe.db.get_value(\"Cafe User\", post.owner,['username','company','designation','bio'],as_dict=1)\n  \ndata.author = {\n  \"name\": user.full_name if not post.publisher else author.title,\n  \"handle\": author.username if not post.publisher else author.handle,\n  \"image\": user.user_image if not post.publisher else author.image,\n  \"bio\": author.bio if not post.publisher else author.description,\n}",
+ "page_data_script": "slug = frappe.form_dict.slug\n\npost_exists = frappe.db.exists(\"Cafe Post\",{\"slug\":slug})\n\nif not post_exists:\n  raise frappe.PageDoesNotExistError\n\npost = frappe.get_doc(\"Cafe Post\", {\"slug\": slug})\n\ndt = frappe.utils.getdate(post.creation)\nmonths = [\"Jan\", \"Feb\", \"Mar\", \"Apr\", \"May\", \"Jun\", \"Jul\", \"Aug\", \"Sep\", \"Oct\", \"Nov\", \"Dec\"]\npost.creation = f\"{months[dt.month - 1]} {dt.day} {dt.year}\"\n\ncomment_count = frappe.db.count(\"Cafe Post Comment\", filters={'post': post.name})\nlike_count = frappe.db.count(\"Cafe Social Like\", filters={'post': post.name})\n\ncomments =  frappe.db.get_all(\n    \"Cafe Post Comment\",\n     filters={'post': post.name},\n    fields=[\n        \"name\",\n        \"content\",\n        \"owner\"\n    ],\n    order_by=\"creation desc\",\n)\n\n\nComment = frappe.qb.DocType(\"Cafe Post Comment\")\nUser = frappe.qb.DocType(\"User\")\n# 2. Fetch comments with user details using Query Builder\nquery = (\n    frappe.qb.from_(Comment)\n    .inner_join(User).on(Comment.owner == User.name)\n    .select(\n        Comment.name,\n        Comment.content,\n        Comment.owner,\n        Comment.creation,\n        User.full_name,\n        User.user_image\n    )\n    .where(Comment.post == post.name)\n    .orderby(Comment.creation, order=frappe.qb.desc)\n)\ncomments = query.run(as_dict=True)\n# 3. Attach the likes count to each comment using frappe.db.count\nfor comment in comments:\n    comment.likes = frappe.db.count(\"Cafe Social Like\", filters={\"comment\": comment.name}) or \"0\"\n    comment.time_ago = frappe.utils.pretty_date(comment.creation)\n\ndata.post = {\n    \"name\": post.name,\n    \"title\": post.title,\n    \"content\": post.content,\n    \"cover_image\": post.cover_image,\n    \"reading_time\": post.reading_time,\n    \"creation\":post.creation,\n    \"tags\": post.tags,\n    \"comment_count\":comment_count,\n    \"like_count\":like_count,\n    \"comments\":comments,\n    \"liked_by_me\":1 if bool( frappe.db.exists(\"Cafe Social Like\",{\"owner\":frappe.session.user,\"post\":post.name})) else 0\n}\n\nif post.publisher:\n  author = frappe.db.get_value(\"Cafe Publication\", post.publisher,['name','title','handle','description','image'], as_dict=1)\nelse:\n  user = frappe.db.get_value(\"User\", post.owner,['user_image','full_name'],as_dict=1)\n  author = frappe.db.get_value(\"Cafe User\", post.owner,['name','username','company','designation','bio'],as_dict=1)\n\n\nfilter = {\"publisher\":author.name} if post.publisher else {\"user\":author.name}\n\ndata.author = {\n  \"name\": user.full_name if not post.publisher else author.title,\n  \"handle\": author.username if not post.publisher else author.handle,\n  \"image\": user.user_image if not post.publisher else author.image,\n  \"bio\": author.bio if not post.publisher else author.description,\n  \"is_subscribed\":bool(frappe.db.exists('Cafe Subscription',{\n    \"owner\":frappe.session.user,\n      **filter\n  }))\n}\n\ndata.page_data = {\n  \"author\":data.author\n}",
  "page_name": "page-b301f073",
  "page_title": "Post",
- "preview": "/files/page-b301f073-preview.webp?v=c585e",
+ "preview": "/files/page-b301f073-preview.webp?v=0fbfc",
  "project_folder": "cafe",
  "published": 1,
  "route": "cafe/posts/:slug"

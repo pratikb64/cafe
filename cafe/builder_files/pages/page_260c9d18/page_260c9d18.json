@@ -29,7 +29,6 @@
       "flexDirection": "row",
       "flexShrink": 0,
       "fontFamily": "Inter Regular",
-      "height": "fit-content",
       "overflow": "hidden",
       "width": "100%"
      },
@@ -41,7 +40,9 @@
       {
        "activeState": null,
        "attributes": {},
-       "baseStyles": {},
+       "baseStyles": {
+        "maxHeight": "100%"
+       },
        "blockClientScript": "",
        "blockDataScript": "",
        "blockId": "fpmu8lggh",
@@ -107,9 +108,7 @@
         "flexDirection": "column",
         "flexGrow": 1,
         "flexShrink": 1,
-        "height": "100vh",
         "justifyContent": "flex-start",
-        "minHeight": "100%",
         "overflow": "hidden",
         "position": "relative",
         "width": "auto"
@@ -3043,14 +3042,14 @@
  "idx": 3,
  "is_standard": 1,
  "is_template": 0,
- "modified": "2026-04-26 21:35:30.374452",
+ "modified": "2026-04-27 14:27:17.315642",
  "modified_by": "Administrator",
  "name": "page-260c9d18",
  "owner": "Administrator",
  "page_data_script": "user = frappe.db.get_value(\"Cafe User\", {\"handle\": frappe.form_dict.handle},['handle','company','designation','bio','introduction','user'],as_dict=1)\n\nif not user:\n  raise frappe.PageDoesNotExistError\n\nfrappe_user = frappe.db.get_value(\"User\", user.user,['full_name','user_image'],as_dict=1)\n\ndata.can_edit_profile = user.user == frappe.session.user\n\ndata.user = {\n  **user,\n  **frappe_user,\n  \"handle\": f\"@{user.handle}\",\n  \"designation\": f\"{user.designation} at {user.company}\"\n}\n\ndata.all_posts_url = f\"/cafe/profile/{user.handle}/posts\"\n\ndata.education = []\ndata.work_history = []\n\n\nall_experiences = frappe.db.get_all(\n    \"Cafe User Experience\",\n    filters={\n        \"parent\": user.user,\n    },\n    fields=[\n        \"organization\",\n        \"title\",\n        \"description\",\n        \"from_month\",\n        \"from_year\",\n        \"to_month\",\n        \"to_year\",\n        \"is_current\",\n        \"experience_type\",\n        \"parentfield\"\n    ],\n    order_by=\"from_year desc, from_month desc\",\n)\n\n# data.experiences=experiences\n\nfor exp in all_experiences:\n    from_date = (\n        f\"{exp['from_month']} {exp['from_year']}\"\n        if exp[\"from_month\"]\n        else str(exp[\"from_year\"])\n    )\n\n    if exp[\"is_current\"]:\n        duration = f\"{from_date} - Present\"\n    else:\n        to_date = (\n            f\"{exp['to_month']} {exp['to_year']}\"\n            if exp[\"to_month\"]\n            else str(exp[\"to_year\"])\n            if exp[\"to_year\"]\n            else \"\"\n        )\n        duration = f\"{from_date} - {to_date}\" if to_date else from_date\n\n    exp[\"duration\"] = duration\n    if exp.experience_type == \"Work\":\n      data.work_history.append(exp)\n    else:\n      data.education.append(exp)\n\ndata.posts = {\n\"data\": [],\n\"are_more_than_three\": 0\n}\n\nposts = frappe.db.get_all(\"Cafe Post\", fields=['name', 'title', 'description', 'cover_image', 'reading_time', 'slug', 'creation'], limit=3)\n\nfor post in posts:\n  count = frappe.db.count(\"Cafe Post Comment\", filters={'post': post['name']})\n  \n  if count == 0:\n      post['comments_count'] = None\n  elif count == 1:\n      post['comments_count'] = f\"{count} comment\"\n  else:\n      post['comments_count'] = f\"{count} comments\"\n  \n  if post.get('creation'):\n      dt = frappe.utils.getdate(post['creation'])\n      months = [\"Jan\", \"Feb\", \"Mar\", \"Apr\", \"May\", \"Jun\", \"Jul\", \"Aug\", \"Sep\", \"Oct\", \"Nov\", \"Dec\"]\n      post['formatted_date'] = f\"{months[dt.month - 1]} {dt.day} {dt.year}\"\n\n  post.url = f\"/cafe/posts/{post.slug}\"\n  \ndata.posts['data'] = posts\ndata.posts['are_more_than_three'] = frappe.db.count(\"Cafe Post\") > 3\n\nuser = frappe.db.get_value(\"Cafe User\", {\"user\": frappe.session.user}, \"name\")\n\n# data.work_history = []\n\n# experiences = frappe.db.get_all(\n#     \"Cafe User Experience\",\n#     filters={\"parent\": user, \"parentfield\": \"work_history\", \"experience_type\": \"Work\"},\n#     fields=[\"organization\", \"title\", \"description\", \"from_month\", \"from_year\", \"to_month\", \"to_year\", \"is_current\"],\n#     order_by=\"from_year desc, from_month desc\"\n# )\n\n# for exp in experiences:\n#     from_date = f\"{exp['from_month']} {exp['from_year']}\" if exp['from_month'] else str(exp['from_year'])\n\n#     if exp['is_current']:\n#         duration = f\"{from_date} - Present\"\n#     else:\n#         to_date = f\"{exp['to_month']} {exp['to_year']}\" if exp['to_month'] else str(exp['to_year']) if exp['to_year'] else \"\"\n#         duration = f\"{from_date} - {to_date}\" if to_date else from_date\n\n#     exp['duration'] = duration\n#     data.work_history.append(exp)",
  "page_name": "page-260c9d18",
  "page_title": "Profile",
- "preview": "/files/page-260c9d18-preview.webp?v=10a69",
+ "preview": "/files/page-260c9d18-preview.webp?v=fb3ac",
  "project_folder": "cafe",
  "published": 1,
  "route": "cafe/profile/:handle"
