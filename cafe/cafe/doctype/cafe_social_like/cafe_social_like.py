@@ -44,7 +44,6 @@ class CafeSocialLike(Document):
 			else:
 				like_count = 0
 
-			# self._like_result = {"liked_by_me": False, "like_count": like_count}
 			return {"liked_by_me": False, "like_count": like_count}
 
 		result = super().insert(*args, **kwargs).as_dict()

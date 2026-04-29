@@ -3,8 +3,9 @@
 
 import re
 
+import frappe
 from frappe.model.document import Document
-from frappe.utils import strip_html
+from frappe.utils import pretty_date, strip_html
 
 
 class CafePost(Document):
@@ -53,3 +54,66 @@ class CafePost(Document):
 		minutes = max(1, round(word_count / WORDS_PER_MINUTE))
 
 		return f"{minutes} min read"
+
+
+@frappe.whitelist(allow_guest=True)
+def get_post_comments(post_id: str, start: int = 0, limit: int = 10):
+	"""Get paginated comments for a post with user info and likes."""
+	Comment = frappe.qb.DocType("Cafe Post Comment")
+	CafeUser = frappe.qb.DocType("Cafe User")
+	User = frappe.qb.DocType("User")
+
+	comments = (
+		frappe.qb.from_(Comment)
+		.left_join(CafeUser)
+		.on(Comment.owner == CafeUser.user)
+		.left_join(User)
+		.on(Comment.owner == User.name)
+		.select(
+			Comment.name,
+			Comment.content,
+			Comment.owner,
+			Comment.creation,
+			User.full_name,
+			User.user_image,
+			CafeUser.handle,
+		)
+		.where(Comment.post == post_id)
+		.orderby(Comment.creation, order=frappe.qb.desc)
+		.limit(limit)
+		.offset(start)
+		.run(as_dict=True)
+	)
+
+	if not comments:
+		return []
+
+	# Get likes count for comments
+	comment_names = [c.name for c in comments]
+	Like = frappe.qb.DocType("Cafe Social Like")
+	likes_query = (
+		frappe.qb.from_(Like)
+		.select(Like.comment, frappe.qb.functions.Count(Like.name).as_("count"))
+		.where(Like.comment.isin(comment_names))
+		.groupby(Like.comment)
+	)
+	likes_result = likes_query.run(as_dict=True)
+	likes_map = {row.comment: row.count for row in likes_result}
+
+	# Enhance comments with computed fields
+	for comment in comments:
+		comment.likes = likes_map.get(comment.name, 0)
+		comment.time_ago = pretty_date(comment.creation)
+		comment.author_url = (
+			f"/cafe/profile/{comment.handle}"
+			if comment.handle
+			else f"/cafe/profile/{comment.owner}"
+		)
+		comment.liked_by_me = bool(
+			frappe.db.exists(
+				"Cafe Social Like",
+				{"comment": comment.name, "owner": frappe.session.user},
+			)
+		)
+
+	return comments
