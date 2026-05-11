@@ -5,6 +5,7 @@ import re
 
 import frappe
 from frappe.model.document import Document
+from frappe.query_builder.functions import Count
 from frappe.utils import pretty_date, strip_html
 
 
@@ -93,7 +94,7 @@ def get_post_comments(post_id: str, start: int = 0, limit: int = 10):
 	Like = frappe.qb.DocType("Cafe Social Like")
 	likes_query = (
 		frappe.qb.from_(Like)
-		.select(Like.comment, frappe.qb.functions.Count(Like.name).as_("count"))
+		.select(Like.comment, Count(Like.name).as_("count"))
 		.where(Like.comment.isin(comment_names))
 		.groupby(Like.comment)
 	)
