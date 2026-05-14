@@ -2231,8 +2231,7 @@
                 "justifyContent": "center",
                 "overflowX": "hidden",
                 "overflowY": "hidden",
-                "padding": "0 256px",
-                "width": "660px"
+                "width": "100%"
                },
                "blockClientScript": "",
                "blockDataScript": "",
@@ -3630,7 +3629,7 @@
  "idx": 3,
  "is_standard": 1,
  "is_template": 0,
- "modified": "2026-05-13 22:21:29.894482",
+ "modified": "2026-05-14 12:18:09.948511",
  "modified_by": "Administrator",
  "name": "page-260c9d18",
  "owner": "Administrator",
